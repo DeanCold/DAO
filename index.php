@@ -46,13 +46,23 @@ $aluno = new Usuario();
 
 // echo $aluno;
 
+#alterar um usuario
+// $usuario = new Usuario();
+
+// $usuario->loadByid(1);
+
+
+// $usuario->update("Aluno", "Cyclope");
+
+// echo $usuario;
+
 $usuario = new Usuario();
 
-$usuario->loadByid(1);
+$usuario->loadById(7);
 
-
-$usuario->update("Aluno", "Cyclope");
+$usuario->delete();
 
 echo $usuario;
+
 
 ?>
