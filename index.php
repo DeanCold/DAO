@@ -8,16 +8,51 @@ require_once("config.php");
 
 // echo json_encode($usuarios);
 
-$root = new Usuario();
+// $root = new Usuario();
 
-$root->loadbyId(1);
+// $root->loadbyId(1);
 
-echo $root;
+// echo $root;
 
 
 //Carrega uma Lista de usuarios
 
-// $list = Usuario::getList();
+// $lista = Usuario::getList();
 
-// echo json_encode($list);
+// echo json_encode($lista);
+
+
+#Carrega uma lista de usuarios buscando pelo login
+
+// $search = Usuario::search("Re");
+
+// echo json_encode($search);
+
+#Carrega um usuário usando o login e a senha
+// $usuario = new Usuario();
+// $usuario->verificarLogin("Reginaldo","regis");
+//echo $usuario;
+$aluno = new Usuario();
+
+// $aluno->setDeslogin("aluno");
+
+// $aluno->setDessenha("@aluno");
+
+#Criando um novo usuario
+// $aluno = new Usuario("aluno", "@luno");
+
+// $aluno->insert();
+
+
+// echo $aluno;
+
+$usuario = new Usuario();
+
+$usuario->loadByid(1);
+
+
+$usuario->update("Aluno", "Cyclope");
+
+echo $usuario;
+
 ?>
